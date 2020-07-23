@@ -7,14 +7,15 @@ import ProductBenefits from "../components/ProductBenefits"
 import ProductFeatures from "../components/ProductFeatures"
 import Testimonials from "../components/Testimonials"
 import CallToAction from "../components/CallToAction"
+import PricingWrapper from "../components/PricingWrapper"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <ValueProp />
-    {/* <SocialProof /> */}
     <ProductBenefits />
     <ProductFeatures />
+    <PricingWrapper />
     <Testimonials />
     <CallToAction />
   </Layout>
