@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "public": false,
+    "github": {
+      "enabled": false
+    },
+    "alias": "easy-animate.vercel.app",
+    "builds": [
+        {
+          "src": "package.json",
+          "use": "@now/static-build",
+          "config": {
+            "distDir": "public" 
+          }
+        }
+    ],
+    "routes": [
+      { "src": "/(.*)", "dest": "public/$1" }
+    ]
+  }
