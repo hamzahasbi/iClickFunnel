@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Easy Explainer`,
+    title: `Easy Animate`,
     description: `Eye Catching ,stunning and professional whiteboard animation and explainer videos.`,
     siteUrl: `https://www.gatsby-landing-page-starter.com`,
     author: `@hamzahasbi`,

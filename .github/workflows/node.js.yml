@@ -4,9 +4,6 @@
 name: Node.js CI
 
 on:
-  push:
-    branches:
-      - master
   pull_request:
     branches:
       - master
@@ -14,6 +11,7 @@ on:
 
 jobs:
   build:
+    name: "Building"
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -28,6 +26,20 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm ci
-    - run: npm run build --if-present
+    - run: npm install -g yarn
+    - run: yarn install --frozen-lockfile
+    - run: yarn run build
 #    - run: npm test
+  
+  publish:
+    name: "Publishing to DEV ENV"
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Publish
+      uses: netlify/actions/build@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
