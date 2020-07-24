@@ -1,0 +1,20 @@
+
+name: DEV CI
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  publish:
+    name: "Publishing to DEV ENV"
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Publish
+      uses: netlify/actions/build@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
