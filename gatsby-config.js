@@ -20,8 +20,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-landing-page-starter`,
-        short_name: `landing`,
+        name: `easy-animate`,
+        short_name: `Easy animate`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#675CE2`,
