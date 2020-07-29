@@ -19,7 +19,10 @@ const Header = ({ siteTitle }) => {
     backdropClass = "backdrop backdrop-active"
   }
 
-  const isActive = path => (window.location.href.includes(path) ? "active" : "")
+  const isActive = path =>
+    typeof window !== "undefined" && window.location.href.includes(path)
+      ? "active"
+      : ""
   return (
     <header>
       <Backdrop activeClass={backdropClass} click={toggle} />
