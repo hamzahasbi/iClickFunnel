@@ -20,16 +20,16 @@ jobs:
       run:
         working-directory: ${{ matrix.directories }}
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm install -g yarn
-    - run: yarn install --frozen-lockfile
-    - run: yarn run build
-#    - run: npm test
-  
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm install -g yarn
+      - run: yarn install --frozen-lockfile
+      - run: yarn run build
+  #    - run: npm test
+
   publish:
     runs-on: ubuntu-latest
     needs: build
@@ -38,7 +38,7 @@ jobs:
       - uses: amondnet/now-deployment@v2
         with:
           zeit-token: ${{ secrets.ZEIT_TOKEN }} # Required
-          github-token: ${{ secrets.GITHUB_TOKEN }} #Optional 
-          now-args: '--prod' #Optional
-          now-org-id: ${{ secrets.ORG_ID}}  #Required
-          now-project-id: ${{ secrets.PROJECT_ID}} #Required 
+          github-token: ${{ secrets.GITHUB_TOKEN }} #Optional
+          now-args: "--prod" #Optional
+          now-org-id: ${{ secrets.ORG_ID}} #Required
+          now-project-id: ${{ secrets.PROJECT_ID}} #Required
