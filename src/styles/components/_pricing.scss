@@ -1,3 +1,23 @@
+.pricing {
+  background-color: $testimonialsBackgroundColor;
+  text-align: center;
+  margin: 0 auto;
+  padding: 1em 0;
+  h1 {
+    padding: 1em;
+  }
+  p {
+    font-weight: 600;
+    margin: 0 auto;
+    width: 80%;
+  }
+  blockquote {
+    margin-top: 0.5em;
+    padding: 0.25em;
+    font-weight: 400;
+  }
+}
+
 .choose {
   margin: 1.5em;
   padding: 0.75em 1.25em;
@@ -5,14 +25,16 @@
   color: $backgroundColor;
   border-radius: 2rem;
   border: 0;
-  font-size: 1.25rem;
-  font-weight: 700;
+  &:hover{
+    cursor: pointer;
+    color: $hoverColor;
+  }
 }
 
-.cards {
+.card {
   background-color: $backgroundColor;
+  border-radius: 4rem 4rem 0 0;
   max-width: 16rem;
-  height: 35rem;
   margin: 1rem auto;
   border-radius: 4rem;
   display: flex;
@@ -26,11 +48,57 @@
   }
 }
 .cards-wrapper {
-  background-color: $testimonialsBackgroundColor;
   text-align: center;
   margin: 0 auto;
-  padding: 1em 0;
   h1 {
     padding: 1em;
+  }
+}
+
+
+.my-pop {
+  &-overlay {
+    background: rgba(0, 0, 0, .75) !important;
+   }
+  &-content {
+    padding: 0 !important;
+    border: none !important;
+  }
+  @media(min-width:992px){
+    max-width: 420px;
+		width: 70%;
+		min-width: auto;
+  }
+
+}
+.popWrapper {
+  position: relative;
+  text-align: center;
+  background-color: $testimonialsBackgroundColor !important;
+  .close-popup {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  
+    svg {
+      width: 20px;
+      color: #707070;
+    }
+  }
+  .popup-content-popup {
+    padding: 30px 20px 30px;
+    
+    p.title {
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 700;
+      color: #4DAF4C !important;
+      text-align: center;
+    }
+    p {
+      font-size: 16px;
+      line-height: 28px;
+      color: #707070;
+    }
   }
 }

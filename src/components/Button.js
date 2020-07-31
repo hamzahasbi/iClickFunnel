@@ -4,7 +4,7 @@ const Button = ({ label }) => (
   <button className="button">
     <a
       className="mycta"
-      href="mailto:hamza.hasbi@gmail.com"
+      href={`mailto:${MAILTO}`}
       target="_blank"
       rel="noreferrer"
     >
