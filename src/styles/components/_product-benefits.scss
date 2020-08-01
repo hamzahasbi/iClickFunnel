@@ -102,9 +102,3 @@
     grid-column: 5/9;
   }
 }
-
-@include breakpoint("from-laptop") {
-  .product-benefits-group {
-    grid-template-rows: repeat(6, minmax(16rem, 1fr));
-  }
-}

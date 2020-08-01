@@ -1,7 +1,8 @@
+import React, { useState } from "react"
+
+import Backdrop from "./BackdropSection"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React, { useState } from "react"
-import Backdrop from "./BackdropSection"
 
 const Header = ({ siteTitle }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -18,6 +19,10 @@ const Header = ({ siteTitle }) => {
     backdropClass = "backdrop backdrop-active"
   }
 
+  const isActive = path =>
+    typeof window !== "undefined" && window.location.href.includes(path)
+      ? "active"
+      : ""
   return (
     <header>
       <Backdrop activeClass={backdropClass} click={toggle} />
@@ -33,16 +38,24 @@ const Header = ({ siteTitle }) => {
           </div>
           <ul className={navClasses}>
             <li className={navItemClasses}>
-              <a href="#services">Services</a>
+              <a className={isActive("services")} href="#services">
+                Services
+              </a>
             </li>
             <li className={navItemClasses}>
-              <a href="#features">Features</a>
+              <a className={isActive("features")} href="#features">
+                Features
+              </a>
             </li>
             <li className={navItemClasses}>
-              <a href="#pricing">Pricing</a>
+              <a className={isActive("pricing")} href="#pricing">
+                Pricing
+              </a>
             </li>
             <li className={navItemClasses}>
-              <a href="#testimonials">Testimonials</a>
+              <a className={isActive("testimonials")} href="#testimonials">
+                Testimonials
+              </a>
             </li>
 
             {/* <li className={`${navItemClasses} nav-item-bold`} ><a href="#">Sign Up</a></li> */}

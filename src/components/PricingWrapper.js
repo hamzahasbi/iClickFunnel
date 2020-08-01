@@ -1,6 +1,6 @@
-import React from "react"
 import { Grid } from "tabler-react"
 import Pricing from "./Pricing"
+import React from "react"
 
 export const data = [
   {
@@ -43,7 +43,8 @@ export const data = [
 ]
 const PricingWrapper = ({ props }) => {
   return (
-    <div id="pricing">
+    <div id="pricing" className="pricing">
+      <h1>Pricing</h1>
       <Grid.Row className="cards-wrapper">
         {data.map((item, index) => {
           return (

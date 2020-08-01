@@ -1,7 +1,8 @@
-import React from "react"
 import Button from "./Button"
+import React from "react"
 
 const ValueProp = props => {
+
   return (
     <section className="value-prop">
       <div className="value-prop-content">

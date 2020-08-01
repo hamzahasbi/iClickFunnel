@@ -5,4 +5,5 @@
  */
 
 // You can delete this file if you're not using it
-require("./src/styles/index.scss")
+import("./src/styles/index.scss")
+export const onServiceWorkerUpdateReady = () => window.location.reload(true)
