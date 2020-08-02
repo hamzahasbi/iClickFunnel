@@ -3,7 +3,7 @@ import React from "react"
 const ProductFeatures = props => {
   return (
     <section id="features" className="product-features">
-      <h1>Our Services</h1>
+      <h2 className="h1 mt-4 pt-2">Our Services</h2>
       <div className="core-features">
         <div className="core-feature-1">
           <div className="core-feature-1-image">

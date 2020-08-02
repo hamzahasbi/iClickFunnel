@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Easy Animate`,
     description: `Eye Catching ,stunning and professional whiteboard animation and explainer videos.`,
-    siteUrl: `https://www.gatsby-landing-page-starter.com`,
+    siteUrl: `https://easy-animate.com/`,
     author: `@hamzahasbi`,
   },
   plugins: [
@@ -32,5 +32,13 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-sitemap`,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://easy-animate.com',
+        sitemap: 'https://easy-animate.com/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    }
   ],
 }
