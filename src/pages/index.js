@@ -11,7 +11,7 @@ import PricingWrapper from "../components/PricingWrapper"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Welcome" />
     <ValueProp />
     <ProductBenefits />
     <ProductFeatures />

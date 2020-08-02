@@ -15,19 +15,18 @@ const Pricing = ({ offer }) => {
 
   }	        
   const onCancel = (data) => {
-      setProcessed(0);
+    setProcessed(0);
 
   }	        
   const onError = (err) => {
-      console.log("Error!", err);
-      setProcessed(0); 
+    console.log(err)
+    setProcessed(0); 
   }		
   const client = {
     sandbox:    PAYPAL_CLIENT_ID_SANDBOX, // sandbox client ID
     production: PAYPAL_CLIENT_ID_PRODUCTION,// production client ID
   };     
   const currency = 'USD'; // or you can set this value from your props or state   
-  console.log(PAYPAL_ENV_DEV);
   return (
       <PricingCard className="cards">
         <PricingCard.Category>{offer.name}</PricingCard.Category>

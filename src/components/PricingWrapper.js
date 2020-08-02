@@ -44,7 +44,7 @@ export const data = [
 const PricingWrapper = ({ props }) => {
   return (
     <div id="pricing" className="pricing">
-      <h1>Pricing</h1>
+      <h2 className="mt-4 pt-2">Pricing</h2>
       <Grid.Row className="cards-wrapper">
         {data.map((item, index) => {
           return (

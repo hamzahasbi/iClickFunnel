@@ -3,7 +3,7 @@ import React from "react"
 const Testimonials = props => {
   return (
     <section id="testimonials" className="testimonials">
-      <h1>Testimonials</h1>
+      <h2 className="mt-4 pt-2">Testimonials</h2>
       <div className="testimonial-group">
         <div className="testimonial-card-1">
           <div className="testimonial-1-photo"></div>
