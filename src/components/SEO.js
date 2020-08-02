@@ -62,9 +62,13 @@ function SEO({ description, lang, meta, title }) {
         },
       ].concat(meta)}
     >
-    <link rel="shortlink" href={site.siteMetadata.siteUrl} />
-    <link rel="canonical" href={site.siteMetadata.siteUrl} />
-    <link rel="canonical" href={site.siteMetadata.siteUrl} />
+      <meta
+        name="google-site-verification"
+        content="STaPX283sXaDVlMutXmC_bcVGuXP_rPUOrMg9Eiik3c"
+      />
+      <link rel="shortlink" href={site.siteMetadata.siteUrl} />
+      <link rel="canonical" href={site.siteMetadata.siteUrl} />
+      <link rel="canonical" href={site.siteMetadata.siteUrl} />
     </Helmet>
   )
 }
