@@ -7,7 +7,6 @@ const NotFoundPage = () => (
   <Layout>
     <SEO title="404: Not found" />
 
-    <div className="container">
       <div className="row">
         <div className="col-md-12">
           <div className="error-template">
@@ -22,7 +21,7 @@ const NotFoundPage = () => (
                 Take Me Home{" "}
               </a>
               <a
-                href="mailto:hamza.hasbi@gmail.com"
+                href={`mailto:${MAILTO}`}
                 className="btn btn-default btn-lg"
               >
                 <span className="glyphicon glyphicon-envelope"></span> Contact
@@ -32,7 +31,6 @@ const NotFoundPage = () => (
           </div>
         </div>
       </div>
-    </div>
   </Layout>
 )
 

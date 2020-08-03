@@ -3,6 +3,13 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
+export function JsonLd({ children }) {
+  return (
+    <Helmet>
+      <script type="application/ld+json">{JSON.stringify(children)}</script>
+    </Helmet>
+  )
+}
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
     graphql`
@@ -66,6 +73,7 @@ function SEO({ description, lang, meta, title }) {
         name="google-site-verification"
         content="STaPX283sXaDVlMutXmC_bcVGuXP_rPUOrMg9Eiik3c"
       />
+      <meta name="description" content={metaDescription}/>
       <link rel="shortlink" href={site.siteMetadata.siteUrl} />
       <link rel="canonical" href={site.siteMetadata.siteUrl} />
       <link rel="canonical" href={site.siteMetadata.siteUrl} />
