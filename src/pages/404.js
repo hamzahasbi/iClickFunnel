@@ -6,7 +6,6 @@ import SEO from "../components/SEO"
 const NotFoundPage = () => (
   <Layout>
     <SEO title="404: Not found" />
-
       <div className="row">
         <div className="col-md-12">
           <div className="error-template">
