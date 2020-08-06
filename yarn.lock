@@ -6459,6 +6459,21 @@ gatsby-page-utils@^0.2.2:
     lodash "^4.17.15"
     micromatch "^3.1.10"
 
+gatsby-plugin-google-analytics@^2.3.13:
+  version "2.3.13"
+  resolved "https://registry.npm.taobao.org/gatsby-plugin-google-analytics/download/gatsby-plugin-google-analytics-2.3.13.tgz#46f78f4df11cc773d44e5909ea491c8f8c0e6774"
+  integrity sha1-RvePTfEcx3PUTlkJ6kkcj4wOZ3Q=
+  dependencies:
+    "@babel/runtime" "^7.10.3"
+    minimatch "3.0.4"
+
+gatsby-plugin-google-tagmanager@^2.3.11:
+  version "2.3.11"
+  resolved "https://registry.npm.taobao.org/gatsby-plugin-google-tagmanager/download/gatsby-plugin-google-tagmanager-2.3.11.tgz#6192d5095ff8aa7634c66052aaab9d24ab4ff46e"
+  integrity sha1-YZLVCV/4qnY0xmBSqqudJKtP9G4=
+  dependencies:
+    "@babel/runtime" "^7.10.3"
+
 gatsby-plugin-manifest@^2.4.2:
   version "2.4.3"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.4.3.tgz#7d6e25609a59ba2ae8abc9881fa8abbc44e44d79"
@@ -9727,7 +9742,7 @@ minimatch@3.0.3:
   dependencies:
     brace-expansion "^1.0.0"
 
-minimatch@^3.0.3, minimatch@^3.0.4, minimatch@~3.0.2:
+minimatch@3.0.4, minimatch@^3.0.3, minimatch@^3.0.4, minimatch@~3.0.2:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.4.tgz#5166e286457f03306064be5497e8dbb0c3d32083"
   integrity sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==
