@@ -1,6 +1,6 @@
 module.exports = {
-    PAYPAL_CLIENT_ID_SANDBOX : "AQIl4KVkA_ZTOIVH4NUm_MeHIcpbNHnQdW-dTdFAaugX6rcKJNRiYBlzi4OmGWw-qbH2QYZmfwgMpcqZ",
-    PAYPAL_CLIENT_ID_PRODUCTION : "ARZsE1weSGneOGDpOJ-WE1pFgJGNfSEbixNkCR4GyQJR-yuaM2LybFqRYlz9GG45K4Ru8kyqiFyhzlbP-dTdFAaugX6rcKJNRiYBlzi4OmGWw-qbH2QYZmfwgMpcqZ",
-    MAILTO : "hamza.hasbi@gmail.com",
+    PAYPAL_CLIENT_ID_SANDBOX : "GET_YOUR_KEY",
+    PAYPAL_CLIENT_ID_PRODUCTION : "GET_YOUR_KEY",
+    MAILTO : "MAIL",
     PAYPAL_ENV_DEV : "sandbox",
 }
